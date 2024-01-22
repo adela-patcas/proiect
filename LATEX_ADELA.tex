@@ -14,7 +14,7 @@
 \begin{document}
 
 \maketitle{Signal Spaces}
-% insérer la table des matières
+% PAGE 71
 Le langage constitue un puissant filet lâche avec lequel aller à la pêche aux faits simples, alors que les faits sont infinis.
 
 Ce chapitre concerne principalement deux types d'objets mathématiques: les espaces métriques et les espaces vectoriels linéaires. L'idée derrière un espace métrique est 
@@ -36,6 +36,8 @@ utilisée dans les sections, donc la révision des notations matricielles de bas
 Dans le développement de ce chapitre, nous construisons successivement des \textbf{espaces métriques}, des \textbf{espaces vectoriels}, des \textbf{espaces vectoriels normés}, puis des espaces de \textbf{produits internes normés}. 
 Cela nous amènera à l'idée importante des projections et des projections orthogonales. La projection orthogonale sera un outil d'une importance capitale pour nous dans le prochain chapitre, 
 où elle sera utilisée comme base géométrique pour le filtrage et la prédiction par les moindres carrés et les carrés moyens minimaux.
+
+% PAGE 72
 
 \section{Espaces métriques}
 
@@ -218,6 +220,30 @@ métrique sur les fonctions $x$ et $y$ dans $X$ par
   d_p(x, y) = \left[{\int_{a}^{b} |x(t) - y(t)|^p dt}\right]^{1/p} ,
 \end{equation}
 
-où $1 \leq p < \infty$.
+où $1 \leq p < \infty$. Cela donne l'espace métrique $(C[a, b], d_p)$. La métrique $d_p$ entre les fonctions est appelée métrique $L_p$. Il faut établir que (2.3) est, en fait, une métrique. Pour $p = 2$, cela est établi à l'aide de l'inégalité de Cauchy-Schwarz (voir section 2.6). 
+Pour les autres valeurs de $p$, l'inégalité de Minkowski démontrée en annexe A est utilisée.
 
+\textbf{\textit{L'espace métrique} $(C[a, b], d_\infty)$.} En laissant $p \longrightarrow \infty$ dans la définition de la dernière métrique, on obtient (voir encadré 2.1),
+
+\begin{equation}
+  d_\infty(x, y) = sup\{|x(t) - y(t)| : a \leq t \leq b\} ,
+\end{equation}
+
+Autrement dit, la distance entre les fonctions est obtenue au point où les fonctions sont les plus éloignées. Cet espace métrique est noté $(C[a, b], d_\infty)$ ou, plus simplement, $C[a, b]$ (la métrique étant entendue par convention).
+
+La différence entre les espaces métriques $(C[a, b], d_\infty)$ et $(C[a, b], d_p)$ peut être appréciée en considérant les fonctions illustrées dans la figure 2.3. Soit $X = C[0, T]$, et soit $x_0$ un point de $X$ (une fonction). 
+La figure 2.3(a) montre la région dans laquelle toutes les fonctions $x$ qui satisfont
+
+\begin{equation*}
+  d_\infty(x_0, x) < \epsilon
+\end{equation*}
+
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[scale=0.8]{fig2.3}
+%  \caption{Comparaison des métriques $d_1$ et $d_2$}
+%\end{figure}
+
+% PAGE 76
+doit tomber.
 \end{document}
