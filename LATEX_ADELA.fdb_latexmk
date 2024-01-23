@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1706045057 "/Users/adela.patcas/Desktop/mmanps/proiect/LATEX_ADELA.tex" "LATEX_ADELA.pdf" "LATEX_ADELA" 1706045058 0
-  "/Users/adela.patcas/Desktop/mmanps/proiect/LATEX_ADELA.tex" 1706045056 41704 f53469d84a82e5f9e62c63b0205d3a37 ""
+["pdflatex"] 1706050061 "/Users/adela.patcas/Desktop/mmanps/proiect/LATEX_ADELA.tex" "LATEX_ADELA.pdf" "LATEX_ADELA" 1706050062 0
+  "/Users/adela.patcas/Desktop/mmanps/proiect/LATEX_ADELA.tex" 1706050061 48369 1af9e3073b1fde11e9ca468583e2e047 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecbi1095.tfm" 1136768653 3072 19a65fbc725cfc66f5a5fc183b9d418b ""
@@ -83,8 +83,8 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1705940757 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1705940600 7883455 9dd3903605fecb8253e8db4eba1a07c7 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "LATEX_ADELA.aux" 1706045058 736 a7c582bb82a7097073b4f17804b3c6ed "pdflatex"
-  "LATEX_ADELA.tex" 1706045056 41704 f53469d84a82e5f9e62c63b0205d3a37 ""
+  "LATEX_ADELA.aux" 1706050062 848 70cd4bdb0ce6e9dbd0927116860bb17f "pdflatex"
+  "LATEX_ADELA.tex" 1706050061 48369 1af9e3073b1fde11e9ca468583e2e047 ""
   (generated)
   "LATEX_ADELA.aux"
   "LATEX_ADELA.log"

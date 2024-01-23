@@ -737,8 +737,153 @@ Il existe plusieurs détails techniques associés à l'espace $L_p$, qui mérite
 
 % PAGE 85
 
+\subsection{Espaces vectoriels}
 
+\noindent
+Un vecteur de dimension finie x peut s'écrire
 
+\begin{equation*}
+  X = \begin{bmatrix}
+    x_1 \\
+    x_2 \\
+    \vdots \\
+    x_n \\
+  \end{bmatrix}.
+\end{equation*}
 
+\noindent
+Les éléments du vecteur sont $x_i,i = 1, 2, \ldots, n$. 
+Chacun des éléments du vecteur appartient à un ensemble, tel que l'ensemble des nombres réels $x_i \in \mathbb{R}$, ou l'ensemble des entiers $x_i \in \mathbb{Z}$. 
+Cet ensemble de nombres est appelé l'ensemble des scalaires de l'espace vectoriel.
+
+La représentation vectorielle de dimension finie est largement utilisée, en particulier pour les signaux à temps discret, dans lesquels les composantes du signal à temps discret forment des éléments dans un vecteur. 
+Cependant, pour représenter et analyser des signaux en temps continu, une compréhension plus globale des concepts vectoriels est utile. 
+Il est possible de considérer la fonction $x(t)$ comme un vecteur et d'appliquer à l'analyse de $x(t)$ bon nombre des mêmes outils qui pourraient être appliqués à l'analyse d'un vecteur \textbf{x} plus conventionnel. 
+Nous utiliserons donc également le symbole $x$ (ou $x(t)$) pour représenter les vecteurs ainsi que le symbole \textbf{x}, préférant le symbole \textbf{x} pour le cas des vecteurs de dimension finie. 
+De plus, lors de l'introduction de nouveaux concepts d'espace vectoriel, les vecteurs sont indiqués en caractères gras pour les distinguer des scalaires. 
+Remarque: dans la notation manuscrite (comme sur un tableau noir), la police en gras est généralement désignée dans la communauté du traitement du signal par un trait de soulignement, comme dans $\underline{x}$, ou, par souci de concision, par aucune notation supplémentaire. 
+Désigner les vecteurs manuscrits avec une flèche en exposant $\overrightarrow{x}$ est plus courant dans la communauté des physiciens.
+\vspace{4mm}
+
+\textbf{Définition 2.13} Un \textbf{espace vectoriel linéaire} $S$ sur un ensemble de scalaires $R$ est une collection d'objets appelés vecteurs, ainsi qu'une opération additive $+$ et une opération de multiplication scalaire $\cdot$, qui satisfont aux propriétés suivantes:
+
+\begin{enumerate}
+  \item[VS1] $S$ forme un groupe par addition. Autrement dit, les propriétés suivantes sont satisfaites.
+  
+  \begin{enumerate}
+    \item Pour tout $x$ et $y \in S$ , $x + y \in S$. (L'opération d'addition est fermée.)$^1$
+    \item Il existe un élément d'identité dans $S$, que nous noterons \textbf{0}, tel que pour n'importe quel $x \in S$,
+    
+    \begin{equation*}
+      x + 0 = 0 + x = x.
+    \end{equation*}
+
+    \item Pour chaque élément $x \in S$ il existe un autre élément $y \in S$ tel que
+    
+    \begin{equation*}
+      x + y = 0.
+    \end{equation*}
+
+    \noindent
+    L'élément $y$ est l'inverse additif de $x$ et est généralement noté $-x$.
+    \item L'opération d'addition est associative; pour tout $x, y$ et $z \in S$,
+    
+    \begin{equation*}
+      (x + y) + z = x + (y + z).
+    \end{equation*}
+  \end{enumerate}
+
+  \item[VS2] Pour tout $a, b \in R$ et tout $x$ et $y$ dans $S$,
+  
+  \begin{align*}
+    ax &\in S, \\
+    a(bx) &= (ab)x, \\
+    (a+b)x &= ax + bx, \\
+    a(x+y) &= ax + ay.
+  \end{align*}
+
+  % PAGE 86
+  \item[VS3] Il existe un élément d'identité multiplicatif $1 \in R$ tel que $1x = x$. Il existe un élément $0 \in R$ tel que $0x = 0$.
+  \vspace{4mm}
+\end{enumerate}
+
+\noindent
+L'ensemble $R$ est l'ensemble des scalaires de l'espace vectoriel.
+\vspace{3mm}
+
+L'ensemble des scalaires est le plus souvent considéré comme l'ensemble des nombres réels ou des nombres complexes. Cependant, dans certaines applications, d'autres ensembles de scalaires sont utilisés, tels que des polynômes ou des nombres modulo 256. 
+La seule exigence concernant l'ensemble de scalaires est que les opérations d'addition et de multiplication puissent être utilisées comme d'habitude (bien qu'aucun inverse multiplicatif ne soit nécessaire), et qu'il existe un nombre 1 qui est une identité multiplicative. 
+Dans ce chapitre, lorsque nous parlons de problèmes tels que les sous-espaces fermés, les sous-espaces complets, etc., on suppose que l'ensemble des scalaires est soit les nombres réels $\mathbb{R}$, soit les nombres complexes $\mathbb{Z}$, puisque ceux-ci sont complets.
+
+Nous parlerons indifféremment d'\textit{espace vectoriel linéaire} ou \textit{d'espace vectoriel}.
+\vspace{4mm}
+
+\textbf{Exemple 2.2.1} L'espace vectoriel le plus connu est $\mathbb{R}^n$, l'ensemble des n-uplets. Par exemple, si $x_1, x_2 \in \mathbb{R}^4$, et
+
+\begin{equation*}
+  x_1 = \begin{bmatrix}
+    1 \\
+    5 \\
+    4 \\
+    2 \\
+  \end{bmatrix}
+  \quad \quad \quad
+  x_2 = \begin{bmatrix}
+    5 \\
+    2 \\
+    0 \\
+    -2 \\
+  \end{bmatrix},
+\end{equation*}
+
+alors
+
+\begin{equation*}
+  x_1 + x_2 = \begin{bmatrix}
+    6 \\
+    7 \\
+    4 \\
+    0 \\
+  \end{bmatrix}
+  \quad \quad \quad
+  3x_1 + 2x_2 = \begin{bmatrix}
+    13 \\
+    19 \\
+    12 \\
+    2 \\
+  \end{bmatrix}.
+\end{equation*}
+
+\noindent
+Il existe plusieurs autres espaces vectoriels de dimension finie, dont nous mentionnons quelques-uns.
+\vspace{4mm}
+
+\noindent
+\textbf{Exemple 2.2.2}
+
+\begin{enumerate}
+  \item L'ensemble des matrices $m \times n$ avec des éléments réels.
+  \item L'ensemble des polynômes de degré jusqu'à $n$ avec des coefficients réels.
+  \item L'ensemble des polynômes à coefficients réels, avec l'addition et la multiplication habituelles modulo le polynôme $p(t) = 1 + t^8$, forme un espace vectoriel linéaire. 
+  Nous désignons cet espace vectoriel par $\mathbb{R}[t]/ \langle t^8 + 1 \rangle$.
+\end{enumerate}
+\vspace{4mm}
+
+\noindent
+En plus de ces exemples (dont il sera montré ultérieurement qu'ils ont une dimension finie), il existe de nombreux espaces vectoriels importants qui sont de dimension infinie (d'une manière qui sera précisée dans ce qui suit).
+\vspace{4mm}
+
+\noindent
+\textbf{Exemple 2.2.3}
+
+\begin{enumerate}
+  \item Espaces de séquence: L'ensemble de toutes les séquences infiniment longues $\{x_n\}$ forme un espace vectoriel de dimension infinie
+  \item Fonctions continues: L'ensemble des fonctions continues définies sur l'intervalle $[a, b]$ forme un espace vectoriel. Nous désignons cet espace vectoriel par $C[a, b]$.
+  \item $L_p[a, b]$: Les fonctions dans $L_p$ forment les éléments d'un espace vectoriel de dimension infinie.
+\end{enumerate}
+\vspace{4mm}
+
+\noindent
+\textbf{Définition 2.15} Soit $S$ un espace vectoriel. Si $V \subset S$ est un sous-ensemble tel que $V$ est lui-même un espace vectoriel, alors $V$ est dit un \textbf{sous-espace} de $S$.
 
 \end{document}
