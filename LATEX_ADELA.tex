@@ -7,13 +7,13 @@
 \usepackage[english,francais]{babel}
 
 \graphicspath{ {./img/} }
-\setlength{\parindent}{0pt}
+%\setlength{\parindent}{0pt}
 \author{Adela Patcas}
 \title{Signal Spaces}
 
 \begin{document}
 
-\maketitle{Signal Spaces}
+\section*{Signal Spaces}
 % PAGE 71
 Le langage constitue un puissant filet lâche avec lequel aller à la pêche aux faits simples, alors que les faits sont infinis.
 
@@ -39,7 +39,7 @@ où elle sera utilisée comme base géométrique pour le filtrage et la prédict
 
 % PAGE 72
 
-\section{Espaces métriques}
+\subsection{Espaces métriques}
 
 Nous pouvons considérer que les signaux (fonctions) qui nous intéressent dans un problème particulier sont membres d'un ensemble $X$. En étudiant et en appliquant ces signaux, nous pouvons être intéressés à comprendre 
 comment un signal se compare aux autres signaux de cet ensemble. Une façon d'y parvenir consiste à mesurer une "distance" entre les signaux en utilisant une mesure de distance qui est à la fois mathématiquement significative 
@@ -144,7 +144,9 @@ correspondent aux bits de \textbf{x}. Une métrique appropriée pour ce critère
 où
 
 \begin{equation*}
-  h(x, y) = 
+  h(x, y) = \begin{cases} 1 & si \ x - y \neq 0 \\
+    0 & si \ x - y = 0.
+        \end{cases}
 \end{equation*}
 
 Lorsque \textbf{x} et \textbf{y} sont des séquences binaires, alors la distance de Hamming qui les sépare peut s'écrire
@@ -190,14 +192,11 @@ Il existe également de nombreux espaces métriques utiles définis sur les fonc
 
 % Box 2.1 Sup and inf
 \vspace{7mm}
-\fbox{%
-    \parbox{\textwidth}{%
-\textbf{Encadré 2.1: Sup et inf}
-}%
-}
 
 \fbox{%
     \parbox{\textwidth}{%
+\textbf{Encadré 2.1: Sup et inf}
+\par\noindent\rule{\textwidth}{1pt}
 Pour un ensemble $S \subset \mathbb{R}$, la moindre limite supérieure (LUB) est le plus petit nombre $z$ tel que $z \geq x$ pour chaque $x \in S$. Le LUB d'un ensemble $S$ est appelé le \textbf{sup} (supremum) de l'ensemble. S'il n'y a pas de nombre supérieur à tous les éléments de $S$, 
 alors $sup(S) = \infty$. De même, la plus grande limite inférieure (GLB) d'un ensemble est le plus grand nombre $w$ tel que $w \leq x$ pour chaque $x \in S$. Le GLB est appelé l'\textbf{inf} (infimum) de $S$. S'il n'y a pas de nombre inférieur à tous les éléments de $S$, alors $inf(S) = -\infty$.
 
@@ -245,5 +244,501 @@ La figure 2.3(a) montre la région dans laquelle toutes les fonctions $x$ qui sa
 %\end{figure}
 
 % PAGE 76
-doit tomber.
+doit tomber. Par exemple, la fonction $x_1(t)$, comme indiqué, se situe dans la région. Même s'il peut y avoir des agitations dans la région, la fonction n'est jamais autorisée à s'échapper.
+
+En revanche, la figure 2.3(b) illustre certaines fonctions qui satisfont
+
+\begin{equation*}
+  d_2(x_0, x) < \epsilon.
+\end{equation*}
+
+Autrement dit, ce sont des fonctions pour lesquelles
+
+\begin{equation*}
+  \int_{0}^{T} (x_0(t) - x(t))^2 dt < \epsilon.
+\end{equation*}
+
+À tout moment $t_0$ donné, il peut y avoir un écart significatif par rapport à $x_0(t)$ , tant que la région sur laquelle l'écart se produit n'est pas trop longue. Plus la zone de déviation est étroite, plus la déviation peut être importante. 
+Si $x(t)$ est une approximation de $x_0(t)$, l'utilisation de la métrique $d_\infty$ pour exprimer le critère d'approximation fournit une limite supérieure à l'erreur d'approximation $x(t) - x_0(t)$ qui ne peut pas être obtenue en utilisant la métrique $d_p$ pour $1 \leq p < \infty$.
+
+\textbf{\textit{L'espace métrique} $L_p[a, b]$.} Soit $L_p[a, b]$ l'ensemble des fonctions $x(t)$ à valeurs réelles ou complexes définies sur l'intervalle $t \in [a, b]$ telles que
+
+\begin{equation*}
+  \int_{a}^{b} |x(t)|^p dt < \infty,
+\end{equation*}
+
+où $1 \leq p < \infty$. Cet ensemble, équipé de la métrique $d_p$ de (2.3), forme l'espace métrique $(L_p[a, b], d_p)$ ou, plus simplement, $L_p[a, b]$. Lorsque l'intervalle est compris, il est souvent écrit simplement par $L_p$. La métrique (2.3) est souvent appelée métrique $L_p$.
+
+Plusieurs aspects techniques associés à l'espace L sont abordés dans la section 2.1.3. Pour de nombreux problèmes d'intérêt technique, ces détails techniques ne présentent pas de difficulté, mais ils méritent une certaine attention.
+
+\textbf{\textit{L'espace métrique} $L_\infty[a, b]$.} Soit $L_\infty[a, b]$ l'ensemble des fonctions $x(t)$ à valeurs réelles ou complexes définies sur l'intervalle $[a, b]$ telles que
+
+\begin{equation*}
+  \sup_{t \in [a, b]} |x(t)| < \infty.
+\end{equation*}
+
+Cet ensemble, muni de la métrique $d_\infty$ de (2.4), est un espace métrique.
+
+\subsubsection{Quelques termes topologiques}
+Une fois la notion de métrique établie, nous pouvons introduire quelques concepts élémentaires de la topologie par ensembles de points.
+
+Dans un espace métrique $X$, la \textbf{boule} ou \textbf{sphère} centrée en $x_0$ de rayon $\delta$ est l'ensemble des points qui sont à une distance $\delta$ de $x_0$:
+
+\begin{equation}
+  B(x_0, \delta) = \{x \in X : d(x_0, x) < \delta\}.
+\end{equation}
+
+Une telle boule est aussi dite un \textbf{voisinage} de $x_0$: c'est l'ensemble des points qui habitent à proximité de $x_0$.
+
+\textbf{Définition 2.3} Un point $x_0 \in X$ est \textbf{intérieur} à un ensemble $S \subset X$ si tous les points suffisamment proches de $x_0$ sont dans $S$. Autrement dit, il existe $\delta > 0$ tel que $B(x_0, \delta) \subset S$.
+
+\textbf{L'intérieur} d'un ensemble $S$ est l'ensemble de tous les points de $x$ qui sont intérieurs à l'ensemble. Un point $x_0  \notin S$ est \textbf{extérieur} s'il existe un voisinage de $x_0$ qui est à l'extérieur (ne coupe pas) $S$.
+
+La figure 2.4 illustre un point intérieur, un point extérieur et un point qui n'est ni intérieur ni extérieur.
+
+% PAGE 77
+
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[scale=0.8]{fig2.4}
+%  \caption{$x_0$ est intérieur, $x_2$ est extérieur et $x_2$ n'est ni intérieur ni extérieur}
+%\end{figure}
+
+\textbf{Définition 2.4} Un ensemble $S$ est \textbf{ouvert} si tout point de $S$ est intérieur.
+
+\textbf{Exemple 2.1.7} L'ensemble $S = (0, 1) \subset \mathbb{R}$ est un ensemble ouvert. Nous montrerons que tout point est intérieur. Soit $x_0 \in S$. Alors la voisinage $B(x_0, \delta)$, où
+
+\begin{equation*}
+  \delta = \frac{1}{2} min(x_0, 1 - x_0),
+\end{equation*}
+
+est un sous-ensemble de $S$ pour tout $x_0 \in S$.
+
+L'ensemble $Y = [0, 1] \subset \mathbb{R}$ (y compris les points finaux) n'est pas ouvert. Le point 0 n'est entouré d'aucun quartier entièrement situé en $Y$.
+
+Il est simple de montrer que les unions finies et les intersections d'ensembles ouverts sont ouvertes.
+
+\textbf{Définition 2.5} Un ensemble $S \subset X$ est dit \textbf{fermé} si le complémentaire de $S$ est un ensemble ouvert.
+
+\textbf{Exemple 2.1.8} Soit $X = (0, 4)$ et soit $S = [1, 2] \subset X$. Alors $\bar{S} = (0,1) \cup (2, 4)$. C'est l'union de deux ensembles ouverts, et donc ouvert. Donc $S$ doit être fermé.
+
+Dans de nombreux cas dans ce livre, nous utiliserons des ensembles ouverts car ils ne peuvent pas contenir un seul point. Par exemple, dans certains résultats sur l'optimisation, nous pourrions énoncer quelque chose comme: "$f(t)$ est continu dans un voisinage ouvert autour de $t_0$." 
+Cela signifie que nous pouvons examiner les points autour de $t_0$ - dans au moins certains quartier - et y utiliser la continuité.
+
+\textbf{Définition 2.6} Un \textbf{point limite} d'un ensemble $S$ est un point $x_0$ tel que chaque voisinage de $x_0$ contient des éléments à la fois dans $S$ et non dans $S$. Un point frontière n'est pas nécessairement un élément de $S$.
+
+La \textbf{frontière} d'un ensemble $S$ est la collection de tous les points limites de $S$. La frontière d'un ensemble $S$ est parfois notée $bdy(S)$.
+
+\textbf{Exemple 2.1.9} Pour l'ensemble $S = [0, 1) \subset \mathbb{R}$, le point 0 est un point frontière, puisque tout voisinage de O a des points dans $S$ et des points hors de $S$. Le point 1 est aussi un point frontière (qui n'est pas un élément de $S$). La limite de $S$ est $bdy(S) = \{0, 1\}$.
+
+Cet ensemble n'est ni ouvert ni fermé dans $\mathbb{R}$.
+
+\textbf{Définition 2.7} La \textbf{fermeture} d'un ensemble $S$ est l'union de l'ensemble $S$ avec sa frontière. La fermeture
+de $S$ est noté fermeture($S$). (D'autres textes utilisent $\bar{S}$ pour indiquer la fermeture.)
+
+\begin{equation*}
+  closure(S) = S \cup bdy(S).
+\end{equation*}
+
+La fermeture d'un ensemble est toujours fermée.
+
+\textbf{Exemple 2.1.10} Pour l'ensemble $S = [0, 1)$, la fermeture est
+
+\begin{equation*}
+  closure(S) = [0, 1].
+\end{equation*}
+
+% PAGE 78
+
+La figure 2.5 illustre des ensembles ouverts et fermés.
+
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[scale=0.8]{fig2.5}
+%  \caption{Illustration d'ensembles ouverts et fermés}
+%\end{figure}
+
+\textbf{Exemple 2.1.11} Quelques exemples d'ensembles ouverts et fermés:
+
+\begin{enumerate}
+  \item L'ensemble de $(x, y)$ tel que $x^2-2yx = 0$ est fermé dans $\mathbb{R}^2$. (Chaque point est un point frontière.)
+  \item L'ensemble de $(x, y)$ tel que $x^2y > 3(x - y)$ est ouvert dans $\mathbb{R}^2$.
+  \item L'ensemble $\mathbb{Z}$ est fermé dans $\mathbb{R}$. (Chaque point est isolé de tout autre point; chaque point est un point frontière.)
+\end{enumerate}
+
+En plus des ensembles simples de points dans $\mathbb{R}^n$, il est intéressant d'examiner les ensembles ouverts et fermés sur des espaces métriques plus complexes.
+
+\textbf{Exemple 2.1.12} Soit $X = C[0, T]$. L'ensemble des fonctions $x \in X$ tel que
+
+\begin{equation*}
+  d_\infty(x_0, x) < \epsilon,
+\end{equation*}
+
+qui est représenté sur la figure 2.3(a), est un ensemble ouvert. C'est le voisinage ouvert des fonctions autour de $x_0(t)$.
+
+\textbf{Définition 2.8} Un point $x \in X$ est dit \textbf{un point de regroupement} dans $X$ si chaque voisinage autour de $x$ contient une infinité de points de $X$.
+
+\textbf{Définition 2.9} Le support d'une fonction $f:A \longrightarrow B$ est la fermeture de l'ensemble des éléments $a \in A$ où $f(a) \neq 0$.
+
+En concluant cette section de définitions, nous résumons comme suit certaines des propriétés topologiques de base des ensembles.
+
+\begin{enumerate}
+  \item L'union de n'importe quel nombre (même un nombre infini) d'ensembles ouverts est ouverte. L'intersection de n'importe quel nombre (même un nombre infini) d'ensembles fermés est fermée.
+  \item L'intersection d'un nombre infini d'ensembles ouverts n'a pas besoin d'être ouverte. Pour voir ça, soit $A_k = (0, 1 + 1/k)$. Alors, $A_1 \subset A_2 \subset A_3 \subset \cdots$.
+  L'intersection de tous ces intervalles, $B = \cap_{k=1}^{\infty} A_k$ est l'intervalle $(0, 1]$, qui n'est pas un ensemble ouvert.
+  \item L'union d'un nombre infini d'ensembles fermés n'a pas besoin d'être fermée.
+\end{enumerate}
+
+\subsubsection{Séquences, séquences de Cauchy et complétude}
+Les séquences de nombres ou de fonctions apparaissent fréquemment dans la théorie et la pratique du traitement du signal. A titre d'exemple, un algorithme itératif tel qu'un filtre adaptatif produit une séquence de vecteurs (poids de filtre).
+
+% PAGE 79
+De nombreuses séquences sont générées comme suit: À partir d'un point initial xo dans un espace métrique X, une séquence est obtenue en mettant à jour le dernier point, en incorporant éventuellement de nouvelles données. La mise à jour d'un algorithme itératif peut être écrite de manière abstraite sous la forme
+
+\begin{equation*}
+  x_{n+1} = f(x_n, u_n),
+\end{equation*}
+
+où $f$ est une fonction de mise à jour et $u_n$ est les données d'entrée à la nième itération. Une itération répétée donne la séquence $x_0, x_1, \ldots$.
+
+Si $x_n$ se rapproche finalement d'une valeur pour $n$ suffisamment grand, nous pouvons dire que la séquence $\{x_n\}$ converge. Ceci est indiqué plus précisément dans la définition suivante.
+
+\textbf{Définition 2.10} Si pour chaque $\delta > 0$, il existe un $n_0$ tel que $d(x_n, x^*) < \delta$ pour chaque $n > n_0$ pour une valeur fixe $x^*$, alors la séquence $\{x_n\}$ est dite converger vers $x^*$. Dans ce cas, nous écrivons
+
+\begin{equation*}
+  x_n \longrightarrow x^*.
+\end{equation*}
+
+On dit dans ce cas que $x^*$ est la \textbf{limite} de $x_n$.
+
+Une autre façon de dire cela est la suivante: La séquence $\{x_n\}$ converge vers $x^*$ si et seulement si tout voisinage autour de $x^*$ contient tous les termes $x_n$ pour $n > n_0$. Pour tout voisinage $N$ autour de $x^*$, il existe un $n_0$ tel que $x_n \in N$ quand $n \geq n_0$.
+
+\textbf{Exemple 2.1.13} La convergence peut être appréciée en considérant des séquences qui ne convergent pas. Les séquences
+
+\begin{equation*}
+  a_n = n^2,
+\end{equation*}
+\begin{equation*}
+  b_n = 1 + (-1)^n,
+\end{equation*}
+
+ne convergent pas: la première suite n'est pas bornée, et la seconde suite oscille entre 0 et 2.
+
+Les faits suivants sur les séquences convergentes sont importants:
+
+\begin{enumerate}
+  \item Soit $(X, d)$ un espace métrique. La fermeture d'un ensemble $A \subset X$ est l'ensemble de toutes les limites des séquences convergentes de points de $A$.
+  \item Un ensemble $A \subset X$ est fermé si et seulement s'il contient la limite de chaque séquence convergente $\{x_n\}$ dont les points se trouvent dans $A$.
+\end{enumerate}
+
+\textbf{Exemple 2.1.14} Considérons la séquence de nombres suivante:
+
+\begin{equation*}
+  \{1, 1.41, 1.414, 1.4142, 1.41421, \ldots\}.
+\end{equation*}
+
+Chaque nombre de cette séquence est un nombre rationnel, un élément de $\mathbb{Q}$. Cette séquence converge vers $\sqrt{2}$, qui est un nombre irrationnel.
+Puisque la limite de la suite n'est pas dans l'ensemble $\mathbb{Q}$, nous concluons que $\mathbb{Q}$ n'est pas fermé. Cependant, l'ensemble des nombres réels $\mathbb{R}$ est fermé: toute suite convergente dans $\mathbb{R}$ a sa limite dans $\mathbb{R}$.
+
+Semblable à une limite est un \textbf{point limite}: si la séquence $x_n$, revient infiniment souvent au voisinage d'un point $x^*$, alors $x^*$ est un point limite. Dans la séquence
+
+\begin{equation*}
+  b_n = 1 + (-1)^n,
+\end{equation*}
+
+les points 0 et 2 sont tous deux des points limites (mais pas des limites) de la séquence. S'il existe des points limites d'une suite, on peut prendre une sous-suite qui converge vers une limite.
+
+Le plus grand point limite d'une séquence $\{x_n\}$ est appelé la limite supérieure, ou \textbf{limsup}. Elle s'écrit souvent sous la forme
+
+\begin{equation*}
+  \limsup_{n \longrightarrow \infty} x_n.
+\end{equation*}
+
+% PAGE 80
+Le plus petit point limite d'une séquence est appelé limite inférieure, ou \textbf{liminf}. On l'écrit souvent ainsi
+
+\begin{equation*}
+  \liminf_{n \longrightarrow \infty} x_n.
+\end{equation*}
+
+Évidemment, si $lim sup x_n = lim inf x_n$ alors la suite est convergente.
+
+\textbf{Exemple 2.1.15} Considérons la séquence
+
+\begin{equation*}
+  c_n = 1+ \frac{1}{n} + (-1)^n.
+\end{equation*}
+
+Il y a deux points Ilimit: 2 et 0. La sous-séquence $\{c_0, c_2, c_4, \ldots\}$ a pour limite 2 et la sous-séquence $\{c_1, c_3, c_5, \ldots\}$ a pour limite 0. Pour la séquence $\{c_n\}$,
+
+\begin{equation*}
+  \limsup_{n \longrightarrow \infty} c_n = 2,
+\end{equation*}
+\begin{equation*}
+  \liminf_{n \longrightarrow \infty} c_n = 0.
+\end{equation*}
+
+\textbf{Définition 2.11} Une séquence $\{x_n\}$ dans $\mathbb{R}$ est \textbf{monotone} si
+
+\begin{equation*}
+  x_1 \leq x_2 \leq x_3 \leq \cdots
+\end{equation*}
+ou
+\begin{equation*}
+  x_1 \geq x_2 \geq x_3 \geq \cdots
+\end{equation*}
+
+Pour les suites sur les nombres réels, le fait suivant est clair: toute suite monotone bornée est convergente. Puisque la séquence est limitée, la séquence monotone "manque de place" et doit donc avoir un point limite qui (parce que la séquence est monotone) doit être unique.
+
+\textbf{Définition 2.12} Une suite $\{x_n\}$ dans un espace métrique $(X, d)$ est dite une \textbf{suite de Cauchy} si, pour tout $\epsilon > 0$, il existe un $N > 0$ (qui peut dépendre de $\epsilon$) tel que $d(x_n, x_m) < \epsilon$ pour chaque $m, n > N$.
+
+On peut montrer (voir les exercices) que si une suite converge, c'est une suite de Cauchy. En revanche, il est possible qu'une suite soit une suite de Cauchy et ne soit pas convergente dans $X$.
+
+\textbf{Exemple 2.1.16} Soit $C[a, b]$ l'ensemble des fonctions continues définies sur l'intervalle $[a, b]$. Soit $X = C[-1, 1]$, et considérons la séquence de fonctions $f_n(t)$ définie par
+
+\begin{equation}
+  f_n(t) = \begin{cases} 0 & t < -1/n, \\
+    nt/2 + 1/2 & -1/n \leq t \leq 1/n, \\
+    1 & t > 1/n.
+        \end{cases}
+\end{equation}
+
+Une fonction typique est présentée dans la figure 2.6. Dans l'espace métrique $(X, d_2)$, où $d_2$ est la métrique définie par
+
+\begin{equation*}
+  d_2^2(f, g) = \int_{-1}^{1}(f(t) - g(t))^2 dt,
+\end{equation*}
+
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[scale=0.8]{fig2.6}
+%  \caption{La fonction $f_n(t)$}
+%\end{figure}
+
+% PAGE 81
+
+nous trouvons que
+\begin{equation*}
+  d_2(f_n, f_m) = \frac{1}{6m^3n}(m - n)^2 \quad m > n,
+\end{equation*}
+qui $\longrightarrow 0$ pour $m$ et $n$ grands. Ainsi la séquence est une séquence de Cauchy, mais la fonction limitée
+\begin{equation*}
+  f(t) = \begin{cases} 0 & t < 0, \\
+    1/2 & t = 0, \\
+    1 & t > 0.
+        \end{cases}
+\end{equation*}
+est une fonction discontinue et n'est donc pas dans $X$. Par conséquent, on ne peut pas dire que $f_n(t)$ est une suite convergente dans $X$.
+
+L'échec d'une séquence de Cauchy à converger est une déficience - un "trou" - dans l'espace métrique sous-jacent.
+
+\textbf{Définition 2.13} Un espace métrique $(X, d)$ est \textbf{complet} si chaque séquence de Cauchy dans X est convergente dans $X$.
+
+Par cette définition, l'espace métrique $(C[a, b], d_2)$ de l'exemple 2.1.16 n'est pas complet: il existe des séquences de Cauchy où la limite n'est pas dans l'espace métrique.
+
+\textbf{Exemple 2.1.17} Le fait qu'un espace métrique soit complet ou non dépend de la métrique utilisée. Considérons l'espace métrique $(C[-1, 1], d_\infty)$, et $d_\infty$ est la métrique
+
+\begin{equation*}
+  d_\infty(f, g) = \sup_{t \in [-1, 1]} |f(t) - g(t)|.
+\end{equation*}
+
+On peut montrer que la séquence $f_n(t)$ n'est pas une séquence de Cauchy dans cet espace métrique, nous ne pouvons donc pas utiliser cette séquence pour tester l'exhaustivité de $(C[a, b], d_\infty)$. Mais on peut encore plaider en faveur de l'exhaustivité de l'espace. 
+Soit $x_n(t)$ une suite de Cauchy dans $(C[a, b], d_\infty)$; puis pour tout $\epsilon > 0$,
+
+\begin{equation*}
+  \sup_{t \in [-1, 1]} |x_m(t) - x_n(t)| < \epsilon
+\end{equation*}
+
+pour $m$ et $n$ suffisamment grands, pour que $|x_m(t) - x_n(t)| < \epsilon$ pour chaque $t \in [-1, 1]$. Par conséquent, pour tout $t_0 \in [-1, 1]$ fixe, $x_n(t_0)$ converge vers un certain nombre $x(t_0)$. Collectivement, ceux-ci définissent une fonction $x(t)$. 
+Pour être complet, nous devons montrer que $x(t) \in C[a, b]$; en d'autres termes, qu'il est continu. Soit $n$ suffisamment grand pour que $|x_n(t) - x(t)| < \epsilon/3$. Soit $\delta$ déterminé de telle sorte que $|x_n(t) - x_n(t_0)| < \epsilon/3$ quand $|t - t_0| < \delta$. (Puisque $x_n(t)$ est continu, un tel $\delta$ existe.) Alors
+
+\begin{equation*}
+  |x(t) - x(t_0)| = |(x(t) - x_n(t)) + (x_n(t) - x_n(t_0)) + (x_n(t_0) - x(t_0))|
+\end{equation*}
+\begin{equation*}
+  \leq |x(t) - x_n(t)| + |x_n(t) - x_n(t_0)| + |x_n(t_0) - x(t_0)| < \epsilon,
+\end{equation*}
+
+où la première inégalité découle de l'inégalité triangulaire. Ainsi on voit que pour $|t - t_0| < \delta$ on a $|x(t) - x(t_0)| < \epsilon$, donc $x(t)$ doit être continu.
+\vspace{5mm}
+
+En examinant la convergence des séquences (comme le résultat d'un algorithme itératif), il est généralement plus facile de montrer qu'une séquence est une séquence de Cauchy que de montrer qu'il s'agit d'une séquence convergente. 
+Pour déterminer si une séquence est de Cauchy, il suffit d'examiner la séquence et d'établir que les points deviennent suffisamment proches. En revanche, établir une convergence nécessite des informations autres que la séquence; 
+à savoir, la valeur limite de la séquence. Cependant, si l'espace sous-jacent est complet, il suffit alors d'établir qu'une séquence est une séquence de Cauchy pour établir la convergence. Pour cette raison, nous supposerons 
+généralement que le travail sur les espaces de fonctions s'effectue dans un espace métrique complet.
+\vspace{7mm}
+
+\textbf{Exemple 2.1.18} Un exemple d'espace incomplet est l'espace métrique $(\mathbb{Q}, d_1)$, l'ensemble des nombres rationnels. Dans cet espace, la suite $\{1, 1.41, 1.414,$ $1.4142, 1.41421, \ldots\}$, la suite se rapprochant de $\sqrt{2}$, 
+est une suite de Cauchy, mais elle n'est pas convergente dans $\mathbb{Q}$, puisque $\sqrt{2}$ n'est pas rationnel.
+
+% PAGE 82
+\vspace{7mm}
+
+% Box 2.2 The measure of a set
+\fbox{%
+    \parbox{\textwidth}{%
+\textbf{Encadré 2.2: La mesure d'un ensemble}
+\par\noindent\rule{\textwidth}{1pt}
+
+Étant donné un intervalle réel $S = [a, b)$, la mesure de $S$ est simplement la longueur de l'intervalle, $\mu(S) = b - a$. Pour un ensemble qui est l'union d'intervalles disjoints, $S = S_1 \cup S_2 \cup \cdots$, où $S_i \cap S_j = \emptyset$, la mesure est la somme des mesures individuelles,
+
+\begin{equation*}
+  \mu(S) = \mu(S_1) + \mu(S_2) + \cdots.
+\end{equation*}
+
+Un ensemble de nombres réels est dit avoir une mesure nulle si, pour tout $\epsilon > 0$, l'ensemble peut être couvert par une collection d'intervalles ouverts dont la longueur totale est $< \epsilon$. Un seul polnt a la mesure 0; il en va de même pour une collection finie de points isolés. 
+Tout ensemble dénombrable de points a une mesure nulle, car autour du nième point un intervalle ouvert de longueur $\epsilon/2^n$ peut être placé. La longueur totale de l'ensemble dénombrable est donc inférieure ou égale à
+
+\begin{equation*}
+  \epsilon \left({\frac{1}{2} + \frac{1}{4} + \frac{1}{8} + \cdots}\right) = \epsilon
+\end{equation*}
+
+La mesure des ensembles dans $\mathbb{R}^n$ est définie en trouvant les aires, les volumes, etc. des ensembles dans $\mathbb{R}^n$.
+}%
+}
+\vspace{7mm}
+
+\noindent
+En généralisant les résultats de l'exemple 2.1.16, on peut montrer que $(C[a, b], d_p)$ n'est pas un espace métrique complet pour $p < \infty$. Cependant, l'espace $(L_p[a, b], d_p)$ est un espace métrique complet.
+
+\subsubsection{Détails techniques associés aux espaces* $L_p$ et $L_\infty$}
+\noindent
+Il existe plusieurs détails techniques associés à l'espace $L_p$, qui méritent au moins une brève considération.
+
+\begin{enumerate}
+  \item Considérons les fonctions définies par
+  
+  \begin{equation*}
+    f_1(t) = \begin{cases} sin(t) & 0 \leq t \leq 4, \\
+      0 & sinon;
+          \end{cases} \quad \quad \quad
+    f_2(t) = \begin{cases} sin(t) & 0 \leq t \leq 4, t \neq 2 \\
+      5 & t = 2, \\
+      0 & sinon.
+          \end{cases}
+  \end{equation*}
+  \noindent
+  Ces fonctions ne sont évidemment pas égales en tout point. Cependant, pour tout $p$ compris dans l'intervalle $1 \leq p < \infty$, $d_p(f_1, f_2) = 0$. Nous avons donc des fonctions qui ne sont pas égales mais pour lesquelles la métrique est nulle, en violation de l'exigence M3 pour les métriques, comme indiqué dans la définition 2.1. 
+  Les fonctions $f_1(t)$ et $f_2(t)$ sont dites différentes sur un \textit{ensemble de mesures zéro}, ou être égal \textit{presque partout}, abrégé en p.p. (Voir encadré 2.2.)
+
+  Pour nos besoins, les fonctions $f$ et $g$ pour lesquelles $d_p(f, g) = 0$ sont dites égales, même si elles ne sont pas égales en tout point. Ainsi, lorsque nous parlons d'une fonction, nous faisons en réalité référence à toute une classe de fonctions qui diffèrent sur un ensemble de mesures zéro. 
+  Donc "égalité" ne signifie pas nécessairement égalité en tout point !
+  \vspace{4mm}
+
+  \noindent
+  \textbf{Exemple 2.1.19} Il ressort de la théorie des signaux élémentaires qu'une fonction périodique peut être représentée à l'aide d'une série de Fourier. La fonction d'onde carrée périodique définie par
+
+  \begin{equation*}
+    f(t) = \begin{cases} 0 & - \frac{1}{2} \leq t < - \frac{1}{4}, \\
+      1 &  - \frac{1}{4} \leq t \leq - \frac{1}{4}, \\
+      0 & \frac{1}{4} < t < \frac{1}{2},
+          \end{cases}
+  \end{equation*}
+
+  % PAGE 83
+
+  %\begin{figure}[h]
+  %  \centering
+  %  \includegraphics[scale=0.8]{fig2.7}
+  %  \caption{Illustration du phénomène Gibbs}
+  %\end{figure}
+
+  \noindent
+  a la série de Fourier
+
+  \begin{equation}
+    f(t) = \frac{1}{2} + \frac{1}{\pi}  \left[2cos2\pi t - \frac{2}{3}cos6\pi t + \frac{2}{5}cos10\pi t + \cdots \right] = g(t).
+  \end{equation}
+
+  \noindent
+  Alors, par convergence de la série de Fourier on a
+
+  \begin{equation*}
+    d_2(f(t), g(t)) = \left[ \int_{-1/2}^{1/2} (f(t) - g(t))^2dt \right]^{1/2} = 0.
+  \end{equation*}
+
+  \noindent
+  Cependant, on sait également que pour les fonctions discontinues, le phénomène de Gibbs se produit: à un point de discontinuité, il y a un dépassement supérieur ou inférieur, quel que soit le nombre de termes pris dans la sommation. 
+  La figure 2.7 illustre la nature de la convergence en montrant la somme dans (2.7) tronquée à $N$ termes, pour $N = 1, 3$ et $10$ termes dans la sommation, les tracés de gauche montrant la fonction et son $N$-terme de Fourier représentation $g_N(t)$, 
+  et les tracés de droite montrant l'erreur $f(t) - g_N(t)$. L'erreur point par point converge vers zéro partout sauf aux points de discontinuité, où elle \textit{ne converge jamais vers zéro}. 
+  Cependant, comme la largeur de l'emplacement de l'erreur devient de plus en plus étroite, l'intégrale du carré de l'erreur se rapproche de 0 lorsque $N \longrightarrow \infty$.
+
+  \item L'espace $(L_p[a, b], d_p)$ est plus grand que l'espace $(C[a, b], d_p)$, dans le sens où le premier contient le second. Cela est vrai car il y a des fonctions dans $L_p$, qui ne sont pas continues, alors que toutes les fonctions dans $C[a, b]$ sont aussi des fonctions dans $L_p$ (pourquoi ?). 
+  $L_p$ est un "achèvement" de $C[a, b]$: les séquences dans $C[a, b]$ qui n'ont pas de limite dans $C[a, b]$ ont une limite dans $L_p$.
+
+  \item En fait, $L_p$ est un espace de fonctions suffisamment grand pour que le concept d'intégration que nous apprenons dans le calcul de base, l'intégrale de Riemann, ne s'applique pas systématiquement à toutes les fonctions de $L_p$. Rappelons que l'intégrale de Riemann est définie comme la limite d'une somme 
+  $\sum f(x_i) \Delta x_i$ où les $x_i$, sont choisis comme points à l'intérieur de $\Delta x_i$. Il existe des fonctions dans $L_p$ qui ne peuvent pas être intégrées par ce processus limitant.
+  \vspace{4mm}
+
+  % PAGE 84
+
+  \noindent
+  \textbf{Exemple 2.1.20} L'exemple pathologique habituel d'une telle fonction non intégrable est la fonction définie sur l'intervalle $[0, 1]$ par
+
+  \begin{equation}
+    f(t) = \begin{cases} 1 & si \ t \ est \ rationnel, \\
+      0 &  si \ t \ est \ irrationnel.
+          \end{cases}
+  \end{equation}
+
+  \noindent
+  Dans l'intégrale de Riemann, si les points $x_i$ sont choisis comme rationnels, alors $\int_{0}^{1}f(t)dt = 1$. Si les points $x_i$ sont choisis comme irrationnels, alors $\int_{0}^{1}f(t)dt = 0$. Par sélection minutieuse des points $x_i$, l'intégrale peut prendre \textit{n'importe} quelle valeur comprise entre 0 et 1.
+  \vspace{4mm}
+
+  \noindent
+  L'intégrale appropriée pour une utilisation dans les espaces $L_p$ est \textit{l'intégrale de Lebesgue}. Pour nos besoins, nous n'aurons pas besoin de nous soucier (au-delà de cette brève mention) des distinctions. Soit $\int_{R}$ l'intégration de Riemann et $\int_{L}$ l'intégration de Lebesgue, les règles suivantes s'appliquent:
+
+  \begin{enumerate}
+    \item Si $\int_{R}f(t)dt$ existe, alors $\int_{L}f(t)dt$ existe et $\int_{R}f(t)dt = \int_{L}f(t)dt$
+    \item L'intégrale de Lebesgue est linéaire: Pour un scalaire $\alpha$,
+    
+    \begin{equation*}
+      \int_L \alpha f = \alpha \int_L f  \quad \quad \quad  \int_L (f + g) = \int_L f + \int_L g .
+    \end{equation*}
+
+    \item Si $\int_L |f(t)|^2 dt$ et $\int_L |g(t)|^2 dt$ existe (sont finis), alors $\int_L f(t)g(t)dt$ et $\int_L (f+g)^2 dt$ le sont aussi.
+    \item Si f et g sont égaux sauf sur un ensemble de mesure nulle, alors
+    
+    \begin{equation*}
+      \int_L (f - g) = 0  \quad \quad \quad  \int_L (f - g)^2 = 0.
+    \end{equation*}
+
+    \noindent
+    Cette dernière règle suffit à couvrir bon nombre de fonctions pathologiques pour lesquelles l'intégrale de Riemann n'a aucune valeur. Par exemple, la fonction $f(t)$ définie dans (2.8) est égale à la fonction $g(t) = 0$, sauf sur un ensemble de mesure nulle (puisque les nombres rationnels forment un ensemble dénombrable). 
+    Ainsi, en utilisant l'intégrale de Lebesgue il n'y a pas d'ambiguïté et $\int_{0}^{1}f(t)dt = 0$.
+  \end{enumerate}
+
+  \item Lorsqu'il s'agit de la norme $L_\infty$, un autre problème se pose. Considérez la fonction
+  
+  \begin{equation}
+    x(t) = \begin{cases} 1 & t = 0, \\
+      0 &  t \neq 0.
+          \end{cases}
+  \end{equation}
+
+  \noindent
+  Pour cette fonction $sup x(t) = 1$. Cependant, $x(t)$ ne diffère de la fonction tout zéro que sur un ensemble de mesure zéro. Comme dans le cas des normes $L_p$ il convient de définir la norme $L_\infty$ de telle sorte que les fonctions égales presque partout aient la même norme. 
+  On définit donc la norme $L_\infty$ en trouvant la fonction $y(t)$ qui est égale à $x(t)$ presque partout et qui a le plus petit supremum,
+
+  \begin{equation*}
+    ||x||_{\infty} = \inf_{y(t)=x(t) p.p} sup |y(t)|.
+  \end{equation*}
+
+  \noindent
+  Pour la fonction $x(t)$ dans (2.9), nous trouvons que $y(t) = 0$ satisfait ceci; donc,
+
+  \begin{equation*}
+    ||x||_{\infty} = 0.
+  \end{equation*}
+
+  \noindent
+  La quantité $inf_{y(t)=x(t)} sup |y(t)|$ est appelée le \textit{suprême essentiel} de $x(t)$.
+\end{enumerate}
+
+% PAGE 85
+
+
+
+
+
 \end{document}
