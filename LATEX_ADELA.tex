@@ -5,6 +5,8 @@
 \usepackage{graphicx}
 \usepackage[T1]{fontenc}
 \usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[symbol]{footmisc}
 \pagestyle{fancy}
 \usepackage[english,francais]{babel}
 
@@ -254,10 +256,10 @@
   \item[1.8-47] The quantity
 
   \begin{equation*}
-    \begin{pmatrix}
+    \boxed{\begin{pmatrix}
       n \\
       k 
-    \end{pmatrix} = \frac{n!}{k!(n-k)!}
+    \end{pmatrix} = \frac{n!}{k!(n-k)!}}
   \end{equation*}
 
   \noindent
@@ -291,10 +293,10 @@
   \item[1.8-49] Montrer par induction que
   
   \begin{equation}
-    (x+y)^n = \sum_{k=0}^{n} \begin{pmatrix}
+    \boxed{(x+y)^n = \sum_{k=0}^{n} \begin{pmatrix}
       n \\
       k 
-    \end{pmatrix} x^k y^{n-k}
+    \end{pmatrix} x^k y^{n-k}}
   \end{equation}
 
   \noindent
@@ -310,7 +312,7 @@
   \item[1.8-51] Prouver ce qui suit par induction:
   
   \begin{equation*}
-    \sum_{k=1}^{n}r^k = \frac{r^{n+1}-1}{r-1} \quad r \neq 1
+    \boxed{\sum_{k=1}^{n}r^k = \frac{r^{n+1}-1}{r-1} \quad r \neq 1}
   \end{equation*}
   \item[1.8-52] Prouver par induction que
   
@@ -331,10 +333,9 @@
 
 \begin{enumerate}
   \item[1.9-54] Préparez un tableau montrant le contenu de stockage et les sorties pour le LFSR indiqué dans l'illustration ci-jointe, avec les conditions initiales indiquées dans les éléments de retard. Déterminez également le polynôme de connexion $C(D)$.
-  %\begin{figure}[h]
-  %  \centering
-  %  \includegraphics[scale=0.8]{fig1.1}
-  %\end{figure}
+  \begin{center}
+    \includegraphics[scale=0.6]{fig1.1}
+  \end{center}
 
   \item[1.9-55] Considérons le LFSR décrit par le polynôme
   
@@ -542,11 +543,11 @@ Les propriétés requises d'une métrique sont toutes satisfaites. La dernière 
 ainsi appelé en raison de la relation qui s'impose sur les glissières d'un triangle plan. Soit $x$,$y$ et $z$ désignent les coins d'un triangle, 
 comme le montre la figure 2.1. Alors $d(x, z)$ est la longueur d'un côté,
 
-%\begin{figure}[h]
-%  \centering
-%  \includegraphics[scale=0.8]{fig2.1}
-%  \caption{Illustration de l'inégalité triangulaire}
-%\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.6]{fig2.1}
+  \caption{Illustration de l'inégalité triangulaire}
+\end{figure}
 
 \noindent
 $d(y, z)$ est la longueur du deuxième côté et $d(x, z)$ est la longueur du troisième côté. 
@@ -601,11 +602,11 @@ Pour avoir une bonne représentation des données, nous souhaitons que $\hat{x}$
 Bien que de nombreuses métriques différentes aient été examinées, les métriques utilisées dans la conception du quantificateur s'avèrent souvent être l'une de celles mentionnées 
 ci-dessus, telles que $d_1(x, \hat{x})$ ou $d_2(x, \hat{x})$.
 
-%\begin{figure}[h]
-%  \centering
-%  \includegraphics[scale=0.8]{fig2.2}
-%  \caption{Quantification du vecteur x}
-%\end{figure}
+\begin{figure}[h]
+  \center
+  \includegraphics[scale=0.6]{fig2.2}
+  \caption{Quantification du vecteur x}
+\end{figure}
 
 \vspace{4mm}
 \noindent
@@ -730,11 +731,11 @@ La figure 2.3(a) montre la région dans laquelle toutes les fonctions $x$ qui sa
   d_\infty(x_0, x) < \epsilon
 \end{equation*}
 
-%\begin{figure}[h]
-%  \centering
-%  \includegraphics[scale=0.8]{fig2.3}
-%  \caption{Comparaison des métriques $d_1$ et $d_2$}
-%\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.48]{fig2.3}
+  \caption{Comparaison des métriques $d_1$ et $d_2$}
+\end{figure}
 
 % PAGE 76
 \noindent
@@ -805,13 +806,13 @@ La figure 2.4 illustre un point intérieur, un point extérieur et un point qui 
 
 % PAGE 77
 
-%\begin{figure}[h]
-%  \centering
-%  \includegraphics[scale=0.8]{fig2.4}
-%  \caption{$x_0$ est intérieur, $x_2$ est extérieur et $x_2$ n'est ni intérieur ni extérieur}
-%\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.5]{fig2.4}
+  \caption{$x_0$ est intérieur, $x_2$ est extérieur et $x_2$ n'est ni intérieur ni extérieur}
+\end{figure}
 
-\vspace{4mm}
+\vspace{2mm}
 \noindent
 \textbf{Définition 2.4} Un ensemble $S$ est \textbf{ouvert} si tout point de $S$ est intérieur.
 
@@ -880,11 +881,11 @@ La fermeture d'un ensemble est toujours fermée.
 \noindent
 La figure 2.5 illustre des ensembles ouverts et fermés.
 
-%\begin{figure}[h]
-%  \centering
-%  \includegraphics[scale=0.8]{fig2.5}
-%  \caption{Illustration d'ensembles ouverts et fermés}
-%\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.5]{fig2.5}
+  \caption{Illustration d'ensembles ouverts et fermés}
+\end{figure}
 
 \vspace{4mm}
 \noindent
@@ -1075,11 +1076,11 @@ Une fonction typique est présentée dans la figure 2.6. Dans l'espace métrique
   d_2^2(f, g) = \int_{-1}^{1}(f(t) - g(t))^2 dt,
 \end{equation*}
 
-%\begin{figure}[h]
-%  \centering
-%  \includegraphics[scale=0.8]{fig2.6}
-%  \caption{La fonction $f_n(t)$}
-%\end{figure}
+\begin{figure}[h]
+  \centering
+  \includegraphics[scale=0.5]{fig2.6}
+  \caption{La fonction $f_n(t)$}
+\end{figure}
 
 % PAGE 81
 \noindent
@@ -1178,7 +1179,10 @@ La mesure des ensembles dans $\mathbb{R}^n$ est définie en trouvant les aires, 
 \noindent
 En généralisant les résultats de l'exemple 2.1.16, on peut montrer que $(C[a, b], d_p)$ n'est pas un espace métrique complet pour $p < \infty$. Cependant, l'espace $(L_p[a, b], d_p)$ est un espace métrique complet.
 
-\subsection{Détails techniques associés aux espaces* $L_p$ et $L_\infty$}
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+
+\subsection{Détails techniques associés aux espaces $L_p$ et $L_\infty$\protect\footnote{Remarque: Cette section peut être ignorée lors d'une première lecture.}}
+
 \noindent
 Il existe plusieurs détails techniques associés à l'espace $L_p$, qui méritent au moins une brève considération.
 
@@ -1214,11 +1218,11 @@ Il existe plusieurs détails techniques associés à l'espace $L_p$, qui mérite
 
   % PAGE 83
 
-  %\begin{figure}[h]
-  %  \centering
-  %  \includegraphics[scale=0.8]{fig2.7}
-  %  \caption{Illustration du phénomène Gibbs}
-  %\end{figure}
+  \begin{figure}[h]
+    \center
+    \includegraphics[scale=0.5]{fig2.7}
+    \caption{Illustration du phénomène Gibbs}
+  \end{figure}
 
   \noindent
   a la série de Fourier
@@ -1346,11 +1350,14 @@ Désigner les vecteurs manuscrits avec une flèche en exposant $\overrightarrow{
 \noindent
 \textbf{Définition 2.14} Un \textbf{espace vectoriel linéaire} $S$ sur un ensemble de scalaires $R$ est une collection d'objets appelés vecteurs, ainsi qu'une opération additive $+$ et une opération de multiplication scalaire $\cdot$, qui satisfont aux propriétés suivantes:
 
+\renewcommand*{\thefootnote}{\arabic{footnote}}
+\setcounter{footnote}{0}
+
 \begin{enumerate}
   \item[VS1] $S$ forme un groupe par addition. Autrement dit, les propriétés suivantes sont satisfaites.
   
   \begin{enumerate}
-    \item Pour tout $x$ et $y \in S$ , $x + y \in S$. (L'opération d'addition est fermée.)$^1$
+    \item Pour tout $x$ et $y \in S$ , $x + y \in S$. (L'opération d'addition est fermée.)\footnote{Une opération fermée est un concept distinct d'un ensemble fermé.}
     \item Il existe un élément d'identité dans $S$, que nous noterons \textbf{0}, tel que pour n'importe quel $x \in S$,
     
     \begin{equation*}

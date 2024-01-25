@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.22)  25 JAN 2024 13:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.22)  25 JAN 2024 14:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -128,10 +128,21 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@O@erf=\skip59
 \f@nch@O@olf=\skip60
 \f@nch@O@orf=\skip61
+) (/usr/local/texlive/2023/texmf-dist/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2022/03/08 v6.0d a miscellany of footnote facilities
+\FN@temptoken=\toks23
+\footnotemargin=\dimen152
+\@outputbox@depth=\dimen153
+Package footmisc Info: Declaring symbol style bringhurst on input line 695.
+Package footmisc Info: Declaring symbol style chicago on input line 703.
+Package footmisc Info: Declaring symbol style wiley on input line 712.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 723.
+Package footmisc Info: Declaring symbol style lamport* on input line 743.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 764.
 ) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2023/02/13 3.86 The Babel package
 \babel@savecnt=\count272
-\U@D=\dimen152
+\U@D=\dimen154
 \l@unhyphenated=\language87
  (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
@@ -164,21 +175,21 @@ Package babel Info: Making ; an active character on input line 396.
 Package babel Info: Making ! an active character on input line 397.
 Package babel Info: Making ? an active character on input line 398.
 \FBguill@level=\count275
-\FBold@everypar=\toks23
-\FB@Mht=\dimen153
+\FBold@everypar=\toks24
+\FB@Mht=\dimen155
 \mc@charclass=\count276
 \mc@charfam=\count277
 \mc@charslot=\count278
 \std@mcc=\count279
 \dec@mcc=\count280
-\FB@parskip=\dimen154
-\listindentFB=\dimen155
-\descindentFB=\dimen156
-\labelindentFB=\dimen157
-\labelwidthFB=\dimen158
-\leftmarginFB=\dimen159
-\parindentFFN=\dimen160
-\FBfnindent=\dimen161
+\FB@parskip=\dimen156
+\listindentFB=\dimen157
+\descindentFB=\dimen158
+\labelindentFB=\dimen159
+\labelwidthFB=\dimen160
+\leftmarginFB=\dimen161
+\parindentFFN=\dimen162
+\FBfnindent=\dimen163
 ))) (/usr/local/texlive/2023/texmf-dist/tex/generic/babel/locale/en/babel-english.tex
 Package babel Info: Importing font and identification data for english
 (babel)             from babel-en.ini. Reported on input line 11.
@@ -192,111 +203,167 @@ Package babel Info: Importing font and identification data for french
 ))
 \openout1 = `LATEX_ADELA.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
-LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
  (/usr/local/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count282
-\scratchdimen=\dimen162
+\scratchdimen=\dimen164
 \scratchbox=\box54
 \nofMPsegments=\count283
 \nofMParguments=\count284
-\everyMPshowfont=\toks24
+\everyMPshowfont=\toks25
 \MPscratchCnt=\count285
-\MPscratchDim=\dimen163
+\MPscratchDim=\dimen165
 \MPnumerator=\count286
 \makeMPintoPDFobject=\count287
-\everyMPtoPDFconversion=\toks25
+\everyMPtoPDFconversion=\toks26
 ) (/usr/local/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \degres on input line 20.
-LaTeX Info: Redefining \up on input line 20.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 30.
+LaTeX Info: Redefining \degres on input line 22.
+LaTeX Info: Redefining \up on input line 22.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 30.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
  (/usr/local/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [63{/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 
 ]
-Overfull \hbox (0.53783pt too wide) in paragraph at lines 158--159
+Overfull \hbox (0.53783pt too wide) in paragraph at lines 160--161
 \T1/cmr/m/n/10 nez la dé-ri-vée par rap-port à $\OML/cmm/m/it/10 ^^V$\T1/cmr/m/n/10 ) . Ap-pe-lons $[]$ l'es-ti-ma-tion de la moyenne
  []
 
-[64] [65] [66] [67] [68] [69] [70
+[64] [65] [66]
+<./img//fig1.1.png, id=25, 329.23pt x 108.405pt>
+File: ./img//fig1.1.png Graphic file (type png)
+<use ./img//fig1.1.png>
+Package pdftex.def Info: ./img//fig1.1.png  used on input line 337.
+(pdftex.def)             Requested size: 197.53952pt x 65.04349pt.
+ [67 <./img//fig1.1.png>] [68] [69] [70
 
 ]
 Chapitre 2.
 [71]
-Overfull \hbox (6.55893pt too wide) in paragraph at lines 557--558
+<./img//fig2.1.png, id=49, 89.33376pt x 118.4425pt>
+File: ./img//fig2.1.png Graphic file (type png)
+<use ./img//fig2.1.png>
+Package pdftex.def Info: ./img//fig2.1.png  used on input line 548.
+(pdftex.def)             Requested size: 53.60065pt x 71.06604pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (6.55893pt too wide) in paragraph at lines 558--559
 []\T1/cmr/m/n/10 Il existe une va-riété de me-sures uti-li-sées ; l'exemple sui-vant en illustre quelques-
  []
 
-[72] [73]
-Overfull \hbox (15.66835pt too wide) in paragraph at lines 665--666
+[72]
+<./img//fig2.2.png, id=53, 221.82875pt x 77.28876pt>
+File: ./img//fig2.2.png Graphic file (type png)
+<use ./img//fig2.2.png>
+Package pdftex.def Info: ./img//fig2.2.png  used on input line 607.
+(pdftex.def)             Requested size: 133.09825pt x 46.3736pt.
+ [73 <./img//fig2.1.png>] [74 <./img//fig2.2.png>]
+Overfull \hbox (15.66835pt too wide) in paragraph at lines 666--667
 []\T1/cmr/m/n/10 L'espace $\OML/cmm/m/it/10 l[]\OT1/cmr/m/n/10 (0\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 1\OT1/cmr/m/n/10 )$ \T1/cmr/m/n/10 est consti-tué de toutes les suites de nombres $\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x[]; x[]; x[]; :::\OMS/cmsy/m/n/10 g$
  []
 
-[74]
-Overfull \hbox (21.79999pt too wide) in paragraph at lines 700--702
+
+Overfull \hbox (21.79999pt too wide) in paragraph at lines 701--703
 [][]
  []
 
 [75]
-Overfull \hbox (1.38875pt too wide) in paragraph at lines 785--787
+<./img//fig2.3.png, id=67, 428.60126pt x 559.08875pt>
+File: ./img//fig2.3.png Graphic file (type png)
+<use ./img//fig2.3.png>
+Package pdftex.def Info: ./img//fig2.3.png  used on input line 736.
+(pdftex.def)             Requested size: 205.72626pt x 268.35954pt.
+ [76 <./img//fig2.3.png>]
+Overfull \hbox (1.38875pt too wide) in paragraph at lines 786--788
 \T1/cmr/m/n/10 Une fois la no-tion de mé-trique éta-blie, nous pou-vons in-tro-duire quelques concepts
  []
 
-[76] [77] [78] [79] [80] [81]
-Overfull \hbox (21.79999pt too wide) in paragraph at lines 1175--1177
+[77]
+<./img//fig2.4.png, id=76, 253.94875pt x 214.8025pt>
+File: ./img//fig2.4.png Graphic file (type png)
+<use ./img//fig2.4.png>
+Package pdftex.def Info: ./img//fig2.4.png  used on input line 811.
+(pdftex.def)             Requested size: 126.97406pt x 107.40099pt.
+ [78 <./img//fig2.4.png>]
+<./img//fig2.5.png, id=81, 261.97874pt x 155.58125pt>
+File: ./img//fig2.5.png Graphic file (type png)
+<use ./img//fig2.5.png>
+Package pdftex.def Info: ./img//fig2.5.png  used on input line 886.
+(pdftex.def)             Requested size: 130.98904pt x 77.79042pt.
+ [79 <./img//fig2.5.png>] [80] [81]
+<./img//fig2.6.png, id=93, 187.70125pt x 112.42pt>
+File: ./img//fig2.6.png Graphic file (type png)
+<use ./img//fig2.6.png>
+Package pdftex.def Info: ./img//fig2.6.png  used on input line 1081.
+(pdftex.def)             Requested size: 93.85039pt x 56.20985pt.
+ [82 <./img//fig2.6.png>] [83]
+Overfull \hbox (21.79999pt too wide) in paragraph at lines 1176--1178
 [][]
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [82]
-Overfull \hbox (1.27919pt too wide) in paragraph at lines 1178--1180
+Overfull \hbox (1.27919pt too wide) in paragraph at lines 1179--1181
 \T1/cmr/m/n/10 En gé-né-ra-li-sant les ré-sul-tats de l'exemple 2.1.16, on peut mon-trer que $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 C\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; d[]\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (12.1931pt too wide) in paragraph at lines 1178--1180
+Overfull \hbox (12.1931pt too wide) in paragraph at lines 1179--1181
 \T1/cmr/m/n/10 n'est pas un es-pace mé-trique com-plet pour $\OML/cmm/m/it/10 p < \OMS/cmsy/m/n/10 1$\T1/cmr/m/n/10 . Ce-pen-dant, l'es-pace $\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 [\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ]\OML/cmm/m/it/10 ; d[]\OT1/cmr/m/n/10 )$
  []
 
-[83] [84] [85] [86] [87] [88] (./LATEX_ADELA.aux) ) 
+
+Underfull \vbox (badness 1629) has occurred while \output is active []
+
+ [84{/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+<./img//fig2.7.png, id=109, 688.5725pt x 544.0325pt>
+File: ./img//fig2.7.png Graphic file (type png)
+<use ./img//fig2.7.png>
+Package pdftex.def Info: ./img//fig2.7.png  used on input line 1223.
+(pdftex.def)             Requested size: 344.2854pt x 272.01558pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[85] [86 <./img//fig2.7.png>] [87] [88] [89] [90] (./LATEX_ADELA.aux) ) 
 Here is how much of TeX's memory you used:
- 4837 strings out of 476025
- 73881 string characters out of 5790017
+ 5085 strings out of 476025
+ 78396 string characters out of 5790017
  1866388 words of memory out of 5000000
- 25229 multiletter control sequences out of 15000+600000
- 532105 words of font info for 76 fonts, out of 8000000 for 9000
+ 25459 multiletter control sequences out of 15000+600000
+ 533206 words of font info for 78 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,14n,62p,420b,428s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on LATEX_ADELA.pdf (26 pages, 359133 bytes).
+</usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbi1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfcc1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on LATEX_ADELA.pdf (28 pages, 884462 bytes).
 PDF statistics:
- 190 PDF objects out of 1000 (max. 8388607)
- 120 compressed objects within 2 object streams
+ 227 PDF objects out of 1000 (max. 8388607)
+ 134 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 
